@@ -1,0 +1,840 @@
+/*
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Fira+Sans&family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Condensed&family=Fira+Sans&display=swap');
+*/
+
+:root {
+    --font-family-lato: 'Lato', sans-serif;
+    --font-family-fira-sans: 'Fira Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: var(--font-family-lato);
+}
+
+.header-background {
+    background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.85)), url(https://asset.jobstore.com/images/index/index_people.png) no-repeat top center;
+    background-size: cover;
+    height: 100vh;
+    min-height: 640px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+}
+
+.top-header {
+    width: 100%;
+    height: 80px;
+    background: transparent;
+    display: flex;
+    font-family: var(--font-family-lato);
+    text-transform: uppercase;
+}
+
+.top-header-logo-container {
+    width: 250px;
+    min-width: 185px;
+    height: 100%;
+}
+
+.top-header-logo {
+    background: url(https://asset.jobstore.com/images/branding/jobstore_logo_white.png) no-repeat top 55% left 25px/150px;
+    height: 100%;
+}
+
+.top-header-menu {
+    width: 960px;
+    max-width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.top-header-menu-left {
+    display: flex;
+    width: 65%;
+}
+
+.top-header-menu-right {
+    display: flex;
+    width: 35%;
+    justify-content: flex-end;
+}
+
+.top-header-menu ul {
+    display: flex;
+    list-style: none;
+    padding-left: 0;
+}
+
+.top-header-menu ul li {
+    color: white;
+    font-size: 12px;
+    margin: 0 2.3%;
+    white-space: nowrap;
+    cursor: pointer;
+}
+
+.top-header-menu ul li:hover {
+    color: #dddddd;
+}
+
+.top-header-button-container {
+    width: 250px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.top-header-button {
+    color: white;
+    font-size: 12px;
+    background: #0732a2;
+    border: 2px solid #0732a2;
+    border-radius: 25px;
+    /* Normally I'll use padding here instead of setting a fix width and height */
+    width: 135px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    margin: 0 20px 0 2%;
+    cursor: pointer;
+}
+
+.top-header-button:hover {
+    color: #0732a2;
+    background-color: white;
+}
+
+@media screen and (max-width: 1080px) {
+    .top-header-menu {
+        justify-content: flex-end;
+        margin-right: 14px;
+    }
+
+    .top-header-menu-left {
+        display: none !important;
+    }
+}
+
+.header-content {
+    position: relative;
+    width: 100%;
+    height: 88vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+.header-content-left {
+    width: 500px;
+    min-width: 475px;
+    margin: 0 3%;
+}
+
+.header-content-left-top {
+    width: 100%;
+    height: auto;
+    font-family: var(--font-family-fira-sans);
+    color: white;
+    text-align: center;
+}
+
+.header-content-left-top-text {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.header-content-left-top-text span {
+    color: #ffa800;
+}
+
+.header-content-left-top-button-group {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 35px 0;
+}
+
+.header-content-left-top-button {
+    width: 45.5%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 4px;
+    font-size: 1.15rem;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header-content-left-top-button span {
+    font-weight: 600;
+}
+
+.header-content-left-top-button:first-child {
+    background: #ffa800;
+    border: 2px solid #ffa800;
+    margin-right: 2.5%;
+}
+
+.header-content-left-top-button:first-child:hover {
+    color: #ffa800;
+    background: transparent;
+}
+
+.header-content-left-top-button:last-child {
+    background: #0704e1;
+    border: 2px solid #0704e1;
+    margin-left: 2.5%;
+}
+
+.header-content-left-top-button:last-child:hover {
+    color: #0704e1;
+    background: white;
+}
+
+.header-content-left-bottom {
+    width: 100%;
+    height: auto;
+    border: 1px solid #000;
+    margin-top: 62px;
+}
+
+.header-content-left-bottom-pic {
+    background: url(https://jobstoreblog.s3-accelerate.amazonaws.com/magazine/wp-content/uploads/2020/10/successful-person-life.jpeg) center no-repeat;
+    background-size: cover;
+    height: 165px;
+    width: 100%;
+}
+
+.header-content-left-bottom-desc-box {
+    width: 100%;
+    height: 100px;
+    padding: 1rem 0;
+    color: #3D5A72;
+    background: #fdeef3;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-content-left-bottom-desc-box div:first-child {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.header-content-left-bottom-desc-box div:nth-child(2) {
+    font-size: 0.9rem;
+    margin: 0.85rem auto;
+}
+
+.header-content-left-bottom-desc-box div:last-child {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ffa800;
+    cursor: pointer;
+}
+
+.header-content-left-bottom-desc-box div:last-child:hover {
+    color: #3D5A72;
+    text-shadow: 1px 1px rgb(255 168 0 / 35%);
+}
+
+.header-content-right {
+    width: 350px;
+    margin: 0 3%;
+}
+
+.header-content-right-top {
+    width: 100%;
+    height: 325px;
+}
+
+.header-content-right-bottom {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1rem 0;
+    margin-top: 37.5px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.header-content-right-bottom-title {
+    color: black;
+    text-transform: uppercase;
+}
+
+.header-content-right-bottom-more {
+    color: #0704e1;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.header-content-right-bottom div:last-child:hover {
+    color: #333333;
+}
+
+.header-content-right-bottom-employers {
+    margin: 0.5rem auto;
+    display: flex;
+    justify-content: center;
+}
+
+.header-content-right-bottom-employers-each {
+    width: 65.438px;
+    height: 45px;
+    margin: 0.25rem 7.425px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-content-right-bottom-employers-each:first-child {
+    background-image: url(https://assets.jobstore.com/uploads/image/1208827/MQxchapaK8/Screenshot2023-01-13at9.26.23AM.png);
+}
+
+.header-content-right-bottom-employers-each:nth-child(2) {
+    background-image: url(https://asset.jobstore.com/uploads/image/1118347/48HWNCyPqE/70617_logo_0_681041.jpg);
+}
+
+.header-content-right-bottom-employers-each:nth-child(3) {
+    background-image: url(https://assets.jobstore.com/uploads/image/1191496/AJ1Mfyao3N/WCDLogo.png);
+}
+
+@media screen and (max-width: 935px) {
+    .header-content-right {
+        display: none;
+    }
+}
+
+/* Body Part */
+
+.body-background {
+    width: 920px;
+    height: auto;
+    min-height: 500px;
+    margin: 0 auto;
+}
+
+.body-gif-container {
+    width: 100%;
+    height: auto;
+    margin: 4rem 0;
+    border: 1.15px solid #dddddd;
+    cursor: pointer;
+}
+
+.body-gif-container:hover {
+    border: 1.15px dashed #dddddd;
+}
+
+.body-component {
+    width: 100%;
+    height: auto;
+    margin-bottom: 4rem;
+}
+
+.body-title {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: var(--font-family-fira-sans);
+    color: black;
+    text-transform: uppercase;
+}
+
+.body-more {
+    width: fit-content;
+    margin: 0 auto;
+    font-size: 0.85rem;
+    line-height: 1.85rem;
+    font-weight: 400;
+    font-family: var(--font-family-fira-sans);
+    color: #0704e1;
+    cursor: pointer;
+}
+
+.body-more:hover {
+    color: #333333;
+}
+
+.body-employers-list {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 1rem auto;
+}
+
+.body-employer-box {
+    width: calc(28 / 90 * 100%);
+    height: auto;
+    min-height: 150px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+
+.body-employer-box-pic {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100px;
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+.body-employer-box:first-child .body-employer-box-pic {
+    background-image: url(https://assets.jobstore.com/uploads/image/1208827/TNQDLR7B2h/WhatsAppImage2023-01-12at8.36.58PM.jpeg);
+}
+
+.body-employer-box:nth-child(2) .body-employer-box-pic {
+    background-image: url(https://web.archive.org/web/20230322154738im_/https://asset.jobstore.com/uploads/image/1118347/6eD4jlLJaE/70617_banner_0_906655.jpg);
+}
+
+.body-employer-box:nth-child(3) .body-employer-box-pic {
+    background-image: url(https://web.archive.org/web/20230322154736im_/https://assets.jobstore.com/uploads/image/1191496/hURE5YEvUm/WCDbanner.jpeg);
+}
+
+.body-employer-box-detail {
+    width: calc(100% - 16%);
+    height: 180px;
+    min-height: 180px;
+    padding: 8%;
+}
+
+.body-employer-box-name {
+    width: 100%;
+    height: auto;
+    min-height: 35px;
+    font-size: 0.85rem;
+    font-weight: 700;
+}
+
+.body-employer-box-address {
+    width: 100%;
+    height: auto;
+    min-height: 55px;
+    line-height: 18px;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: #6A7C8B;
+    margin: 0.5rem auto 1rem;
+}
+
+.body-employer-box-extra {
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.body-employer-box-pic-small {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    width: 35px;
+    height: 35px;
+}
+
+#TaoBinLogo {
+    background-image: url(https://assets.jobstore.com/uploads/image/1208827/MQxchapaK8/Screenshot2023-01-13at9.26.23AM.png);
+}
+
+#USTGlobalLogo {
+    background-image: url(https://web.archive.org/web/20230322174444im_/https://asset.jobstore.com/uploads/image/1118347/48HWNCyPqE/70617_logo_0_681041.jpg);
+}
+
+#WallpaperCarpetLogo {
+    background-image: url(https://web.archive.org/web/20230322154739im_/https://assets.jobstore.com/uploads/image/1191496/AJ1Mfyao3N/WCDLogo.png);
+}
+
+.body-employer-box-button {
+    width: 125px;
+    height: 32px;
+    line-height: 32px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: white;
+    text-align: center;
+    background: #0704e1;
+    border: 2px solid #0704e1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.body-employer-box-button:hover {
+    color: #0704e1;
+    background: white;
+}
+
+.body-trending-list {
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.body-trending-list-column {
+    width: calc(28 / 96 * 100%);
+}
+
+.body-trending-list-each {
+    width: 100%;
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-family-fira-sans);
+    padding: 0.85rem 4.825px;
+    border-bottom: 1.15px solid #dddddd;
+    cursor: pointer;
+}
+
+.body-trending-job-title {
+    height: 20px;
+    line-height: 1.25rem;
+    color: #448aff;
+    background: url(https://web.archive.org/web/20230322154738im_/https://asset.jobstore.com/images/arrow_down.png) no-repeat center right/11px;
+}
+
+.body-trending-job-loc {
+    height: 20px;
+    line-height: 1.25rem;
+    color: black;
+}
+
+.body-trending-list-each:hover {
+    background: #f8fbfe;
+}
+
+.body-trending-list-each:hover .body-trending-job-title {
+    color: #0704e1;
+    background: url(https://web.archive.org/web/20220526154147im_/https://asset.jobstore.com/images/arrow_right_blue.png) no-repeat center right/11px;
+}
+
+.body-search-title {
+    padding: 2% 0;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    line-height: 2rem;
+    font-weight: 700;
+    font-family: var(--font-family-fira-sans);
+    color: black;
+    text-transform: uppercase;
+}
+
+.body-search-title-small {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 600;
+    color: #666666;
+    letter-spacing: 1px;
+    margin: 15px 0;
+    font-family: var(--font-family-lato);
+}
+
+.body-search-part {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 0 auto 4px auto;
+    padding: 1% 0;
+    text-align: center;
+}
+
+.body-search-input {
+    width: calc(99% - 60px);
+    height: 55px;
+    line-height: 55px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-family: var(--font-family-lato);
+    color: #333333;
+    border: 1px solid #dddddd;
+    border-radius: 4px 0 0 4px;
+    box-shadow: -5px 1px 8px -1px rgb(221 221 221), 8px 0px 8px -4px rgb(221 221 221);
+}
+
+.body-search-input:focus {
+    outline: none;
+}
+
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    ::placeholder {
+        color: #888888;
+        font-size: 13px;
+        opacity: 1; /* Firefox */
+    }
+
+    /* Internet Explorer 10-11 */
+    :-ms-input-placeholder {
+        color: #888888;
+        font-size: 13px;
+    }
+  
+    /* Microsoft Edge */
+    ::-ms-input-placeholder {
+        color: #888888;
+        font-size: 13px;
+    }
+
+.body-search-input-icon {
+    position: absolute;
+    right: 0.5%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 11%;
+    height: 55px;
+    line-height: 55px;
+    background: url(https://asset.jobstore.com/images/icon_searchglass_darkgrey.png) no-repeat center;
+    background-size: 20px;
+    z-index: 1;
+}
+
+.body-search-category-part {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    font-size: 15px;
+}
+
+.body-search-category-title {
+    width: 15%;
+    min-width: fit-content;
+    color: #333333;
+}
+
+.body-search-categories {
+    width: 82%;
+    line-height: 26px;
+    margin-left: 3px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.body-search-categories div {
+    margin-right: 18px;
+    color: #0704e1;
+    cursor: pointer;
+}
+
+.body-search-categories div:hover {
+    color: #333333;
+}
+
+@media screen and (max-width: 1000px) {
+    .body-background {
+        width: calc(100% - 4rem);
+        margin: 0 2rem;
+    }
+
+    .body-search-category-part {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .body-search-category-title {
+        margin: 0 auto 1rem;
+    }
+
+    .body-search-categories {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .body-employers-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .body-employer-box {
+        width: calc(100% - 2rem);
+        margin: 1rem 0;
+    }
+
+    .body-employer-box-detail {
+        width: calc(100% - 10%);
+        padding: 5% 5% 2.5%;
+    }
+
+    .body-employer-box-extra {
+        margin: 1.5rem auto 0 auto;
+    }
+
+    .body-trending-list {
+        flex-direction: column;
+    }
+
+    .body-trending-list-column {
+        width: calc(100% - 9.65px);
+    }
+}
+
+
+/* Footer Part */
+
+.footer-background {
+    width: 100%;
+    height: auto;
+    background: #f8f8f8;
+    border-top: 1px solid #eeeeee;
+    letter-spacing: 1px;
+    line-height: 18px;
+    font-family: var(--font-family-lato);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-content-container {
+    margin: 0 auto;
+    padding: 2% 0;
+    width: 60%;
+    max-width: 960px;
+}
+
+.footer-content-container:first-child {
+    border-bottom: 1px solid #515151;
+}
+
+.footer-logo {
+    background: url(https://asset.jobstore.com/images/branding/jobstore_logo_blue.png) no-repeat center;
+    background-size: contain; 
+    width: 200px;
+    height: 50px;
+    margin: 10px auto 20px;
+}
+
+.footer-menus {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-menu-each {
+    width: 22%;
+    min-width: fit-content;
+    margin: 3% 1% 0;
+}
+
+.footer-menu-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #2522e4;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.footer-menu-link {
+    width: fit-content;
+    font-size: 13px;
+    font-weight: 400;
+    color: #444444;
+    margin: 10px 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.footer-menu-link:hover {
+    color: #0704e1;
+}
+
+.footer-menu-link img {
+    width: 13px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.footer-copyright {
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    font-size: 12px;
+    color: #333333;
+    margin: 5% auto 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.footer-copyright span {
+    margin: 0 8px;
+}
+
+.footer-copyright div {
+    cursor: pointer;
+}
+
+.footer-copyright div:hover {
+    color: #0704e1;
+}
+
+.footer-content-detail {
+    color: #333333;
+    text-align: justify;
+    font-size: 12.8px;
+}
+
+.footer-content-detail p {
+    padding: 0 1%;
+    margin: 18px 0;
+}
+
+.footer-content-detail p:first-child {
+    margin-top: 0;
+}
+
+.footer-content-detail p:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 1350px) {
+    .footer-content-container {
+        width: calc(100% - 2rem) !important;
+        margin: 0 1rem;
+    }
+}
+
+@media screen and (max-width: 811px) {
+    .footer-menus {
+        flex-wrap: wrap;
+    }
+
+    .footer-menu-each {
+        width: 45%;
+        margin: 3% 2% 0;
+    }
+}
+
+@media screen and (max-width: 570px) {
+    .footer-copyright-reserved {
+        display: none;
+    }
+}
